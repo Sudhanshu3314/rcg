@@ -1,12 +1,16 @@
+
 <!DOCTYPE html>
 <html>
 <head>
    <title>Ganpati Celebration</title>
 <style>
-table,tr{
+table{
 border:6px solid red;
 border-radius:100px;
-box-shadow:.5px .5px 100px 5px red;
+margin-bottom:80px;
+padding:25px 25px;
+margin-top:40px;
+box-shadow:.5px .5px 50px 5px red;
 }
 .ga{
 border-radius:50%;
@@ -61,6 +65,47 @@ font-family:georgia;
 .foot{
 font-size:130px;
 }
+label{
+  display:block;
+  margin:100px;
+  font-size:70px;
+  color: brown;
+}
+.inp{
+  font-size:55px;
+  padding:6px 27px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#5107AA;
+  background-color:#F8F3FF;
+  outline:none;
+  border:6px double #B60808;
+  border-radius:60px;
+  font-weight:650;
+}
+.head{
+  font-size:75px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+color:darkblue;
+}
+.btn {
+          padding:10px 30px;
+          font-size: 55px;
+          font-family: georgia;
+          border-radius: 50px;
+          outline: none;
+          background-color: white;
+          font-weight: bold;
+          color: red;
+          border: 8px solid green;
+        }
+  .btn:hover{
+    border:8px solid red;
+    color:green;
+  }
+  #var{
+    position: sticky;
+    bottom:100px;
+  }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 </head>
@@ -90,5 +135,59 @@ GRACIOUS  PRESENCE  TO THIS YEAR<br>2022 GANESH CHATURTHI CELEBRATIONS.<br><br><
 </table>
 <br><br><br><br>
 
+
+<table bgcolor="#ECFFF4" Id="var" align="center">
+  <tr>
+    <th align="center">
+      <h2 class="head">&star; <u>Vargani</u> &star;</h2>
+     <form>
+       <label>
+         <input type="text" name="naam" id="naam" class="inp" style="width:600px" placeholder="Enter Name.......">
+       </label>
+      
+       <label>
+        &#8377; <input class="inp" type="number" style="width:480px" name="var" placeholder="Enter Vargani......" id="vargani" >
+        </label>
+        
+      <input type="button" value="Clear" class="btn" onclick="Clr()">  
+    &nbsp;  &nbsp;  &nbsp;  &nbsp;
+    &nbsp;  &nbsp;  &nbsp;  &nbsp;
+    &nbsp;  &nbsp;  &nbsp;  &nbsp;
+      <input type="button" value="Submit" class="btn" onclick="Submit()">  
+
+        
+     </form> 
+      
+    </th>
+  </tr>
+</table>
+
+<script>
+  function Clr(){
+ document.getElementById('naam').value="";
+ document.getElementById('vargani').value="";
+
+  }
+  function Submit(){
+    var n,v;
+    n = document.getElementById('naam').value;
+    v = document.getElementById('vargani').value;
+    url = "https://wa.me/919892215635?text=" + 
+'Name :- ' + n  + '%0a' +
+
+'Vargani :- Rs ' + v + '%0a';
+
+if( n == "" || v == ""){
+  url ="https://rcgb.netlify.app/";
+alert("Please !! Fill up all the details which is required us.");
+}
+
+  window.open( url , '_blank').focus();
+}
+ 
+  
+</script>
+
 </body>
 </html>
+
